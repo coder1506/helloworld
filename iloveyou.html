@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>i love you</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		h1{
+			top: 300px;
+			text-align: center;
+			font-size: 60px;
+			color:pink;
+		}
+		button:hover{
+			background-color: green;
+			transition: 0.45s;
+		}
+		button{
+			width: 150px;
+			height: 50px;
+			background-color: red;
+			border: 0px solid;
+		}
+		.container{
+			width: 100%;
+			height:655px;
+			background-image: url(./love.jpg);
+			background-size: 100% 100%;
+		}
+		.khong{
+			position: absolute;
+			right: 400px;
+			top:200px;
+		}
+		.co{
+			position: absolute;
+			left: 400px;
+			top:200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container" id="container">
+		<h1>Làm người yêu anh nhé !!!</h1>
+		<button class="co" id="co" name="co" onClick="xuli1();">Có</button>
+		<button class="khong" id="khong" name="khong" onmouseover="xuli();">Không</button>
+	</div>
+	<script>
+		function xuli(){
+			document.getElementById('khong').style.right=Math.floor(Math.random()*1000+1)+'px';
+			document.getElementById('khong').style.top=Math.floor(Math.random()*500+1)+'px';
+		}
+		function xuli1(){
+			setTimeout(
+				function(){
+					alert("anh đồng ý");
+				},200
+				);
+			document.getElementById('container').style.backgroundImage="url('./love2.gif')";
+		}
+	</script>
+</body>
+</html>
